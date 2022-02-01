@@ -1,0 +1,8 @@
+<p>todo works!</p>
+<input type="text" placeholder="Enter your task" #task>
+<br><br>
+<button (click)="addTask(task.value)">Add Task</button>
+
+<ul *ngFor="let item of list">
+    <li>{{item.name}}<button (click)="remove(item.id)">Remove</button></li>
+</ul>
