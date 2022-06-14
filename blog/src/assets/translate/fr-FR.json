@@ -1,0 +1,11 @@
+{
+    "choose_language": "Choisissez la langue",
+    "language.english": "Anglais",
+    "language.french": "français",
+    "language.hindi": "hindi",
+    "username": "Saisissez votre nom d'utilisateur",
+    "fieldNotValid": "Ce champ n'est pas valide",
+    "email":"Entrez l'e-mail",
+    "password":"Entrer le mot de passe",
+    "submit":"Soumettre"
+}

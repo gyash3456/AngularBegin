@@ -1,8 +1,23 @@
-<p>reactiveforms works!</p>
-<form [formGroup]='loginForm' (ngSubmit)="getFormData()">
-    <input type="text" placeholder="Enter Username" formControlName="user">
-    <br><br>
-    <input type="password" formControlName="password" placeholder="Enter Password">
-    <br><br>
-    <button>Submit</button>
+<!-- <p>reactiveforms works!</p> -->
+<div class="language-picker-area">
+    <div class="picker-label">{{'choose_language' |translate }}</div>
+
+<select (change)="selectLanguage($event)" class="language-picker">
+    <option value="en-US">{{'language.english' | translate}}</option>
+    <option value="fr-FR">{{'language.french'| translate}}</option>
+    <option value="hi-IN">{{'language.hindi'| translate}}</option>
+</select>
+</div>
+<br><br>
+<form class="form" [formGroup]='loginForm' (ngSubmit)="getFormData()">
+    <input type="text" placeholder="{{'username'| translate}}" formControlName="user"><br>
+    <span style="color: red;" *ngIf="user1&&user1.invalid&&user1.touched">"{{'fieldNotValid'| translate}}"</span>
+    <br>
+    <input type="email"  placeholder="{{'email'| translate}}" formControlName="email"><br>
+    <span style="color: red;" *ngIf="email1 && email1.invalid && email1.touched">"{{'fieldNotValid'| translate}}"</span>
+    <br>
+    <input type="password" formControlName="password" placeholder="{{'password'| translate}}"><br>
+    <span style="color: red;" *ngIf="password && password.invalid && password.touched">"{{'fieldNotValid'| translate}}"</span>
+    <br>
+    <button [disabled]="loginForm.invalid">"{{'submit'| translate}}"</button>
 </form>

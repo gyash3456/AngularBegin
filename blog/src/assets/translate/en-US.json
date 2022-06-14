@@ -1,0 +1,11 @@
+{
+    "choose_language": "Choose language",
+    "language.english": "English",
+    "language.french": "French",
+    "language.hindi": "Hindi",
+    "username": "Enter Username",
+    "fieldNotValid": "This field is not valid",
+    "email":"Enter Email",
+    "password":"Enter Password",
+    "submit":"Submit"
+}
